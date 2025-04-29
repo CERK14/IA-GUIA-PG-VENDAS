@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA NOS NEGÓCIOS: O GUIA DEFINITIVO | Transforme sua empresa em 90 dias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .top-bar {
+            background-color: #111827;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            padding: 60px 0 80px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: #22c55e;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background-color: #16a34a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+        }
+        
+        .hero-image {
+            max-width: 55%;
+            margin: 40px auto 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stats-bar {
+            background-color: #f1f5f9;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            margin: 15px;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+        
+        .stat-text {
+            font-size: 16px;
+            color: #64748b;
+        }
+        
+        .main-content {
+            background-color: white;
+            padding: 60px 0;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #2563eb;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: #1e40af;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        
+        .feature-box {
+            width: calc(33.333% - 30px);
+            margin: 15px;
+            padding: 30px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .feature-desc {
+            font-size: 16px;
+            color: #4b5563;
+        }
+        
+        .testimonials {
+            background-color: #f1f5f9;
+            padding: 80px 0;
+        }
+        
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .testimonial {
+            width: calc(50% - 40px);
+            margin: 20px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .included {
+            padding: 60px 0;
+        }
+        
+        .modules {
+            margin: 40px 0;
+        }
+        
+        .module {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8fafc;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .module-number {
+            width: 50px;
+            height: 50px;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .module-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .module-content p {
+            font-size: 16px;
+            margin: 0;
+            color: #4b5563;
+        }
+        
+        .bonus {
+            background-color: #eff6ff;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 2px dashed #2563eb;
+        }
+        
+        .bonus h3 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+        
+        .faq {
+            background-color: #f8fafc;
+            padding: 60px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e40af;
+        }
+        
+        .faq-answer {
+            font-size: 16px;
+            color: #4b5563;
+        }
+        
+        .pricing {
+            text-align: center;
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .price-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #f8fafc;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-tag {
+            font-size: 22px;
+            color: #64748b;
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+        
+        .price-discount {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .price-guarantee {
+            background-color: rgba(34, 197, 94, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .price-guarantee h4 {
+            color: #16a34a;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background-color: #ef4444;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .countdown {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #111827;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .countdown h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .timer-item {
+            margin: 0 10px;
+            text-align: center;
+        }
+        
+        .timer-number {
+            background-color: #2563eb;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .timer-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+        }
+        
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 40px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .feature-box {
+                width: calc(50% - 30px);
+            }
+            
+            .testimonial {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .feature-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        🔥 OFERTA ESPECIAL DE LANÇAMENTO POR TEMPO LIMITADO 🔥
+    </div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">E-BOOK DEFINITIVO</div>
+            <div class="hero">
+                <h1>TRANSFORME SEU NEGÓCIO COM INTELIGÊNCIA ARTIFICIAL EM APENAS 90 DIAS</h1>
+                <p class="subtitle">O guia prático e acessível que já ajudou mais de 500 empreendedores a implementar IA sem conhecimento técnico avançado ou grandes investimentos</p>
+                <a href="#pricing" class="btn-primary">QUERO TRANSFORMAR MEU NEGÓCIO AGORA!</a>
+                <img src="/IA nos Negócios.png" alt="E-book IA nos Negócios" class="hero-image" />
+            </div>
+        </div>
+    </header>
+    
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">68%</div>
+                    <div class="stat-text">Redução no desperdício<br>após implementação</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-text">Aumento na produção<br>de conteúdo</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-text">Redução em tarefas<br>administrativas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">90</div>
+                    <div class="stat-text">Dias para ver<br>resultados concretos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="main-content">
+        <div class="container">
+            <h2>POR QUE A IA É A REVOLUÇÃO QUE SEU NEGÓCIO PRECISA AGORA</h2>
+            
+            <p>Você já ouviu falar sobre Inteligência Artificial, mas ainda não sabe como aplicá-la no seu negócio? <strong>Não está sozinho.</strong> Muitos empreendedores sabem que a IA é o futuro, mas se sentem perdidos sobre como começar.</p>
+            
+            <p>Imagine reduzir drasticamente o tempo gasto em tarefas repetitivas, prever demandas de clientes com precisão, automatizar seu atendimento 24/7, e tudo isso <strong>sem precisar contratar um especialista em tecnologia</strong> ou fazer investimentos absurdos.</p>
+            
+            <p>A verdade é que <strong>empresas que não adotarem IA nos próximos 2 anos ficarão para trás</strong>. Não estamos falando do futuro distante — estamos falando de AGORA.</p>
+            
+            <div class="features">
+                <div class="feature-box">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Sem Jargão Técnico</div>
+                    <div class="feature-desc">Linguagem simples e direta, focada em aplicações práticas e não em conceitos complexos que você não precisa entender.</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">Soluções Acessíveis</div>
+                    <div class="feature-desc">Ferramentas e estratégias com foco em baixo investimento, ideais para pequenas e médias empresas com orçamento limitado.</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Resultados Rápidos</div>
+                    <div class="feature-desc">Metodologia comprovada para implementar IA e ver retorno em questão de semanas, não meses ou anos.</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🛠️</div>
+                    <div class="feature-title">Passo a Passo Detalhado</div>
+                    <div class="feature-desc">Instruções claras e acionáveis que qualquer pessoa pode seguir, mesmo sem conhecimento técnico prévio.</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-title">Cases Reais</div>
+                    <div class="feature-desc">Exemplos de empresas brasileiras que implementaram as mesmas estratégias e transformaram seus resultados.</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⏱️</div>
+                    <div class="feature-title">Economize Tempo</div>
+                    <div class="feature-desc">Evite meses de pesquisas e tentativas e erros com um guia que condensa tudo que você precisa saber.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2>QUEM JÁ APLICOU COMPROVA QUE FUNCIONA</h2>
+            
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Conseguimos reduzir em 68% o desperdício de produtos no nosso mercado com o sistema de previsão de demanda que implementamos seguindo o guia. O investimento se pagou em menos de 45 dias. Nunca imaginei que seria tão acessível usar IA."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Paulo Mendes</h4>
+                            <p>Proprietário, Mercado Bom Preço</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"As faltas em consultas caíram 71% depois que implementamos o sistema de agendamento inteligente com IA. Nosso faturamento aumentou R$5.600 por mês sem precisar de mais funcionários ou investimentos pesados em tecnologia."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Dra. Ana Claudia</h4>
+                            <p>Proprietária, Clínica Sorriso Perfeito</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Triplicamos nossa produção de conteúdo e conquistamos 4 novos clientes depois de implementar as ferramentas de IA sugeridas no guia. O mais incrível é que a qualidade do trabalho melhorou porque nossa equipe agora tem tempo para estratégia, não apenas produção."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Marcelo Souza</h4>
+                            <p>Diretor, Agência Connect</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Eu tinha medo que implementar IA seria caro e complicado. Este guia provou que eu estava errado. Nosso chatbot já responde 60% das perguntas de clientes, liberando nossa equipe para vendas. O ROI foi de 400% em 2 meses."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Carla Rodrigues</h4>
+                            <p>CEO, Loja Virtual BeautyTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="included">
+        <div class="container">
+            <h2>O QUE VOCÊ VAI ENCONTRAR NESTE GUIA COMPLETO</h2>
+            
+            <div class="modules">
+                <div class="module">
+                    <div class="module-number">1</div>
+                    <div class="module-content">
+                        <h4>Autoavaliação de Prontidão para IA</h4>
+                        <p>Descubra exatamente onde sua empresa está na jornada de transformação digital e quais áreas precisam de atenção antes de implementar IA.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">2</div>
+                    <div class="module-content">
+                        <h4>Fundamentos de IA para Negócios</h4>
+                        <p>Entenda os conceitos essenciais sem jargão técnico, focando apenas no que realmente importa para aplicação prática.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">3</div>
+                    <div class="module-content">
+                        <h4>Aplicações Práticas por Setor</h4>
+                        <p>20+ casos de uso específicos com exemplos de ferramentas, custos reais e tempo de implementação para diferentes setores e tamanhos de empresa.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">4</div>
+                    <div class="module-content">
+                        <h4>Histórias de Sucesso Detalhadas</h4>
+                        <p>Casos reais de PMEs brasileiras com números concretos, desafios enfrentados e lições aprendidas que você pode aplicar.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">5</div>
+                    <div class="module-content">
+                        <h4>Roteiro de Implementação em 4 Fases</h4>
+                        <p>Guia passo a passo desde a descoberta de oportunidades até implementação completa, com modelos e checklists prontos para usar.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">6</div>
+                    <div class="module-content">
+                        <h4>Plano de 90 Dias</h4>
+                        <p>Cronograma detalhado semana a semana para implementar sua primeira solução de IA com resultados mensuráveis em 3 meses.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">7</div>
+                    <div class="module-content">
+                        <h4>Considerações Éticas e Legais</h4>
+                        <p>Tudo que você precisa saber sobre LGPD, propriedade intelectual e aspectos éticos ao implementar IA no seu negócio.</p>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-number">8</div>
+                    <div class="module-content">
+                        <h4>Recursos Adicionais e Ferramentas</h4>
+                        <p>Diretório curado com as melhores ferramentas, cursos, comunidades e recursos gratuitos para continuar sua jornada.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bonus">
+                <h3>BÔNUS EXCLUSIVOS</h3>
+                <p>Além do guia completo, você receberá:</p>
+                
+                <ul>
+                    <li><strong>Planilha de Cálculo de ROI para Projetos de IA</strong> - Para justificar investimentos com dados concretos</li>
+                    <li><strong>Biblioteca de Prompts</strong> - 50+ prompts testados para gerar conteúdo, analisar dados e automatizar tarefas com IA</li>
+                    <li><strong>Templates de Implementação</strong> - Documentos prontos para planejar, gerenciar e avaliar seus projetos de IA</li>
+                    <li><strong>Acesso ao Grupo Exclusivo</strong> - Comunidade de implementadores para troca de experiências e solução de dúvidas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq">
+        <div class="container">
+            <h2>PERGUNTAS FREQUENTES</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Preciso ter conhecimento técnico para implementar IA na minha empresa?</div>
+                <div class="faq-answer">Não! Este guia foi criado especificamente para empreendedores e gestores sem conhecimento técnico avançado. Todas as soluções apresentadas são acessíveis e não exigem programação ou habilidades especializadas.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Qual o investimento necessário para implementar IA seguindo este guia?</div>
+                <div class="faq-answer">O guia prioriza soluções de baixo custo que começam a partir de R$0 (ferramentas gratuitas) até aproximadamente R$500/mês para soluções mais avançadas. O foco é sempre no melhor custo-benefício para PMEs com recursos limitados.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Quanto tempo leva para ver resultados reais com as implementações?</div>
+                <div class="faq-answer">Seguindo nosso plano de 90 dias, você começará a ver resultados iniciais já nas primeiras 4-6 semanas. Muitas das ferramentas podem ser implementadas em questão de dias, e o ROI completo geralmente aparece entre 2-3 meses.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Minha empresa é pequena. Este guia é adequado para mim?</div>
+                <div class="faq-answer">Absolutamente! Na verdade, pequenos negócios frequentemente conseguem implementar IA mais rapidamente por terem menos burocracia. O guia inclui casos específicos para micro e pequenas empresas, com soluções dimensionadas para seus desafios e orçamentos.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">E se as estratégias não funcionarem para o meu negócio?</div>
+                <div class="faq-answer">O guia abrange diversos setores e tamanhos de empresas, com múltiplas abordagens para cada desafio. Além disso, oferecemos garantia de 30 dias - se você não encontrar aplicações relevantes para seu negócio, devolvemos 100% do seu investimento.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Como receberei o material após a compra?</div>
+                <div class="faq-answer">Imediatamente após a confirmação do pagamento, você receberá um email com link para download do e-book, acesso à área de membros com todos os bônus e instruções para participar do grupo exclusivo.</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>INVISTA HOJE NO FUTURO DO SEU NEGÓCIO</h2>
+            
+            <p>Imagine economizar centenas de horas de pesquisa e milhares de reais em consultoria com um guia que entrega exatamente o que você precisa para transformar seu negócio com IA.</p>
+            
+            <div class="price-container">
+                <div class="discount-badge">50% OFF</div>
+                
+                <h3>IA NOS NEGÓCIOS: O GUIA DEFINITIVO</h3>
+                <p>Transforme sua empresa com IA em apenas 90 dias</p>
+                
+                <div class="price-tag">De R$97,99</div>
+                <div class="price-discount">Por apenas R$47</div>
+                <p>Pagamento único - Sem mensalidades</p>
+                
+                <a href="#" class="btn-primary">QUERO TRANSFORMAR MEU NEGÓCIO AGORA!</a>
+                
+                <div class="price-guarantee">
+                    <h4>GARANTIA INCONDICIONAL DE 7 DIAS</h4>
+                    <p>Se por qualquer motivo você não ficar completamente satisfeito, basta enviar um email e devolveremos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
+                </div>
+                
+                <div class="countdown">
+                    <h3>OFERTA DE LANÇAMENTO POR TEMPO LIMITADO</h3>
+                    <p>Esta oferta especial termina em:</p>
+                    
+                    <div class="timer">
+                        <div class="timer-item">
+                            <div class="timer-number">00</div>
+                            <div class="timer-label">Dias</div>
+                        </div>
+                        <div class="timer-item">
+                            <div class="timer-number">12</div>
+                            <div class="timer-label">Horas</div>
+                        </div>
+                        <div class="timer-item">
+                            <div class="timer-number">45</div>
+                            <div class="timer-label">Minutos</div>
+                        </div>
+                        <div class="timer-item">
+                            <div class="timer-number">33</div>
+                            <div class="timer-label">Segundos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>A REVOLUÇÃO DA IA ESTÁ ACONTECENDO AGORA</h2>
+            <p class="subtitle">Não fique para trás enquanto seus concorrentes avançam</p>
+            <a href="#pricing" class="btn-primary">GARANTIR MEU GUIA COM 50% DE DESCONTO</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 IA nos Negócios | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </div>
+            <p>Este material é protegido por direitos autorais. A reprodução não autorizada é proibida.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script simples para o contador regressivo
+        function startCountdown() {
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 1); // Adiciona 1 dia
+            countDownDate.setHours(countDownDate.getHours() + 12); // Adiciona 12 horas
+            
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+                
+                const days = Math.floor(distance / (10000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.querySelector('.timer-item:nth-child(1) .timer-number').innerHTML = days.toString().padStart(2, '0');
+                document.querySelector('.timer-item:nth-child(2) .timer-number').innerHTML = hours.toString().padStart(2, '0');
+                document.querySelector('.timer-item:nth-child(3) .timer-number').innerHTML = minutes.toString().padStart(2, '0');
+                document.querySelector('.timer-item:nth-child(4) .timer-number').innerHTML = seconds.toString().padStart(2, '0');
+                
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.querySelector('.countdown').innerHTML = "<h3>OFERTA ENCERRADA!</h3><p>Entre em contato para informações sobre o próximo lote.</p>";
+                }
+            }, 1000);
+        }
+        
+        // Inicia o contador quando a página carrega
+        document.addEventListener('DOMContentLoaded', startCountdown);
+        
+        // Script para rolagem suave ao clicar em links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
